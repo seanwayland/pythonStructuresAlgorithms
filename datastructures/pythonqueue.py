@@ -1,6 +1,7 @@
 
 '''
 A queue follows FIFO rule(First In First Out)
+caution naming your file "queue" since this is a module name 
 
 '''
 
