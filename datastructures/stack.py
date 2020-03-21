@@ -1,27 +1,28 @@
-class Stack:
+import queue
 
-    def __init__(self):
-        self.stack = []
+L = queue.LifoQueue(maxsize=6)
 
-    def add(self, dataval):
-        # Use list append method to add element
-        if dataval not in self.stack:
-            self.stack.append(dataval)
-            return True
-        else:
-            return False
+# qsize() give the maxsize of
+# the Queue
+print(L.qsize())
 
-    # Use list pop method to remove element
-    def remove(self):
-        if len(self.stack) <= 0:
-            return ("No element in the Stack")
-        else:
-            return self.stack.pop()
+# Data Inserted as 5->9->1->7,
+# same as Queue
+L.put(5)
+L.put(9)
+L.put(1)
+L.put(7)
+L.put(9)
+L.put(10)
+print("Full: ", L.full())
+print("Size: ", L.qsize())
 
-AStack = Stack()
-AStack.add("Mon")
-AStack.add("Tue")
-AStack.add("Wed")
-AStack.add("Thu")
-print(AStack.remove())
-print(AStack.remove())
+# Data will be accessed in the
+# reverse order Reverse of that
+# of Queue
+print(L.get())
+print(L.get())
+print(L.get())
+print(L.get())
+print(L.get())
+print("Empty: ", L.empty())
