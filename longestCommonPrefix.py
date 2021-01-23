@@ -6,10 +6,9 @@ class Solution:
         index = 0
         for c in strs[0]:
             for i in range (1, len(strs)):
-                if index > len(strs[i]) or c!= strs[i][index]:
+                if index > len(strs[i])-1 or c!= strs[i][index]:
                     return LCP
                 
             LCP = LCP + c
             index = index + 1
         return LCP
-                    
