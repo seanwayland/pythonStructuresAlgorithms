@@ -47,8 +47,7 @@ def divide(self, dividend: int, divisor: int) -> int:
     # it to positive.
     return -quotient if negatives != 1 else quotient
   
-  
-  ```
+  '''
   From this, we know that we can fit 80384 into 93706, and that 80384 must be a multiple of 157. But how many copies of 157 is this?
 
 Well, each time we double a number we also double the amount of copies of the original number. So because we doubled 157 nine times, we must have had 2⁹ copies of 157. Indeed, 2⁹ · 157 = 80384. Yay!
@@ -60,4 +59,4 @@ How can we work out how many times 157 fits into 13322? Well, we just repeat the
 If we do this, we'll find that 157 · 2⁶ = 10048 is the highest power that fits into 13322, leaving us with 13322 - 10048 = 3274 and a quotient so far of 2⁶ + 2⁹ = 576 (if you noticed that 10048 looks very familiar, well done. We'll be looking at this in approach 3).
 
 We repeat this process until the dividend is less than 157.
-```
+'''
